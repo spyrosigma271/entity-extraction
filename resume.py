@@ -159,7 +159,7 @@ def run_streamlit_app():
     st.title("Entity Extraction")
 
     text_file = st.file_uploader(
-        "Upload a document file (TXT or PDF)", type=["txt", "pdf"]
+        "Upload your RESUME (TXT or PDF)", type=["txt", "pdf"]
     )
     # schema_file = st.file_uploader(
     #     "Upload a schema file (CSV or JSON)", type=["csv", "json"]
