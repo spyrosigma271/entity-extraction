@@ -1,0 +1,16 @@
+entity_name,entity_type,description,example
+full_name,text,Candidate's complete name,John Smith
+contact_email,text,Professional email address,john.smith@email.com
+phone_number,text,Contact phone number with country code,+1-555-123-4567
+location,text,Current city and country/state,New York NY USA
+linkedin_url,text,LinkedIn profile URL,linkedin.com/in/johnsmith
+work_experience,text,List of previous job positions and companies,Senior Developer at Tech Corp
+education,text,Academic degrees and institutions,MS Computer Science from MIT
+skills_technical,text,Technical skills and technologies,Python Java AWS Docker
+skills_soft,text,Soft skills and competencies,Team Leadership Project Management
+certifications,text,Professional certifications and licenses,AWS Certified Solutions Architect
+languages,text,Languages spoken and proficiency levels,English (Native) Spanish (Intermediate)
+projects,text,Notable projects completed,Built scalable cloud infrastructure
+achievements,text,Quantifiable accomplishments,Reduced costs by 30% Improved efficiency by 45%
+years_experience,number,Total years of professional experience,8
+current_role,text,Current or most recent job title,Senior Software Engineer

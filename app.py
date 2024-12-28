@@ -80,6 +80,7 @@ def extract_entities(schema, text):
     """Send schema and text to Groq-LLM and extract entities"""
     try:
         chat_completion = groq_client.chat.completions.create(
+            
             messages=[
                 {
                     "role": "system",
@@ -113,6 +114,7 @@ def extract_entities(schema, text):
         """,
                 },
             ],
+            
             model="llama3-70b-8192",
         )
 

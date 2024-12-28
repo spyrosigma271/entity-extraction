@@ -1,9 +1,0 @@
-entity_name,entity_type,description,example
-name,text,The full name of a person,John Smith
-email,text,Email address of the person,john.smith@email.com
-phone,text,Contact phone number including country code,+1-555-123-4567
-date,date,Any date mentioned in the document,15/03/2023
-address,text,Physical address including street city and zip,123 Main St New York NY 10001
-organization,text,Name of any company or institution mentioned,Acme Corporation
-amount,number,Any monetary amount or number mentioned,1500.00
-title,text,Professional title or designation,Senior Software Engineer
