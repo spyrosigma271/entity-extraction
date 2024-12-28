@@ -1,0 +1,23 @@
+Professional Profile - John A. Smith
+
+Personal Information:
+Name: John Alexander Smith
+Born: 15/03/1985
+Email: john.smith@email.com
+Phone: +1 (555) 123-4567
+
+Current Address:
+123 Maple Street
+Boston, MA 02108
+
+Employment History:
+Tech Solutions Inc.
+Senior Software Engineer
+Started: January 2020
+
+Education Background:
+Master of Science in Computer Science
+MIT (Massachusetts Institute of Technology)
+Graduated: 2018
+
+John is currently leading the backend development team at Tech Solutions Inc., where he has been instrumental in developing cloud-based solutions. He can be reached at his office during normal business hours.
