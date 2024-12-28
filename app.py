@@ -3,7 +3,7 @@ import fitz  # We can also use pymupdf4llm
 import io
 import re
 from dotenv import load_dotenv
-import os
+import os , json
 from groq import Groq
 
 load_dotenv()
@@ -55,6 +55,27 @@ def read_text(file):
         return None
 
 
+def extract_json_from_response(response_text):
+    """Extract JSON from LLM response"""
+    try:
+        # Find JSON pattern between triple backticks
+        json_match = re.search(r'```(?:json)?\s*(\{.*?\})\s*```', response_text, re.DOTALL)
+        if json_match:
+            json_str = json_match.group(1)
+            # Parse JSON to validate and format
+            return json.loads(json_str)
+        
+        # If no backticks, try to find direct JSON
+        json_match = re.search(r'\{[^{]*\}', response_text, re.DOTALL)
+        if json_match:
+            return json.loads(json_match.group(0))
+            
+        return None
+    except json.JSONDecodeError as e:
+        st.error(f"Failed to parse JSON: {str(e)}")
+        return None
+
+
 def extract_entities(schema, text):
     """Send schema and text to Groq-LLM and extract entities"""
     try:
@@ -96,8 +117,13 @@ def extract_entities(schema, text):
         )
 
         response = chat_completion.choices[0].message.content
-        print(response)
-        return response
+        json_data = extract_json_from_response(response)
+        
+        if json_data:
+            return json_data
+        else:
+            st.error("No valid JSON found in response")
+            return None
     except Exception as e:
         st.error(f"Error extracting entities: {str(e)}")
         return None
@@ -106,10 +132,11 @@ def extract_entities(schema, text):
 st.title("Entity Extraction")
 
 # File uploaders
+text_file = st.file_uploader("Upload a document file (TXT or PDF)", type=["txt", "pdf"])
+
 schema_file = st.file_uploader(
     "Upload a schema file (CSV or JSON)", type=["csv", "json"]
 )
-text_file = st.file_uploader("Upload a document file (TXT or PDF)", type=["txt", "pdf"])
 
 if schema_file and text_file:
     # Process schema
