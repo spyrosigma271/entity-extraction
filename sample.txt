@@ -1,0 +1,43 @@
+PATIENT MEDICAL REPORT
+Date: March 15, 2024
+
+Patient Information:
+Name: Sarah Johnson
+DOB: 09/12/1985
+MRN: #MED123456
+Insurance: BlueCross Healthcare (Policy #BC987654)
+
+Chief Complaint:
+Patient presented to the Emergency Department with severe chest pain and shortness of breath lasting for approximately 2 hours.
+
+Vital Signs:
+- Blood Pressure: 165/95 mmHg
+- Heart Rate: 98 bpm
+- Respiratory Rate: 22/min
+- Temperature: 37.2°C
+- O2 Saturation: 94% on room air
+
+Laboratory Results:
+- Troponin I: 0.8 ng/mL (Elevated)
+- CK-MB: 25 U/L
+- Complete Blood Count: Within normal limits
+- Basic Metabolic Panel: Notable for K+ 3.2 mEq/L
+
+Medications:
+1. Aspirin 325mg - administered immediately
+2. Nitroglycerin 0.4mg SL - given for chest pain
+3. Metoprolol 5mg IV - administered for BP control
+
+Assessment:
+Patient is presenting with symptoms consistent with acute coronary syndrome. ECG shows ST-segment elevation in leads V2-V4, suggesting anterior wall STEMI.
+
+Plan:
+1. Immediate cardiac catheterization
+2. Cardiology consultation requested
+3. Continue monitoring vital signs q15min
+4. NPO status maintained
+5. Admission to CCU pending
+
+Attending Physician: Dr. Michael Chen
+License #: MC123456
+Department: Emergency Medicine

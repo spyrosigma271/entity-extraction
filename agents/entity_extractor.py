@@ -1,4 +1,4 @@
-from typing import Dict, List, Any
+from typing import Dict, List, Any, Union
 from pydantic import BaseModel, Field
 from langgraph.graph import StateGraph, END
 from langchain.chat_models import ChatOpenAI
@@ -15,11 +15,12 @@ openai_api_key = os.getenv("OPENAI_API_KEY")
 class Entity(BaseModel):
     name: str
     type: str
-    value: str
+    value: Union[str, Dict[str, Any]]  # Allow either string or dictionary value
     confidence: float
     reasoning: str
     context: str | None = None
     relationships: List[Dict[str, Any]] = Field(default_factory=list)
+
 
 class WorkflowState(BaseModel):
     text: str
@@ -196,7 +197,7 @@ def create_workflow() -> StateGraph:
         # Continue if there are significant changes in entities or confidence scores
         should_continue_flag = (
             not state.error and
-            state.depth < 2  # Limit refinement iterations
+            state.depth < 1  # Limit refinement iterations
         )
         return "continue" if should_continue_flag else "end"
 

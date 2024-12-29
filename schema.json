@@ -1,0 +1,38 @@
+{
+    "PatientIdentifier": {
+        "description": "Information that identifies a patient",
+        "properties": ["name", "date_of_birth", "medical_record_number"],
+        "domain_specific": true,
+        "examples": ["Sarah Johnson", "MRN #12345", "09/12/1985"]
+    },
+    "VitalSign": {
+        "description": "Physiological measurements indicating body function status",
+        "properties": ["type", "value", "unit"],
+        "domain_specific": true,
+        "examples": ["Blood Pressure: 120/80 mmHg", "Heart Rate: 72 bpm", "Temperature: 37.0°C"]
+    },
+    "LabResult": {
+        "description": "Laboratory test results and measurements",
+        "properties": ["test_name", "value", "unit", "reference_range", "interpretation"],
+        "domain_specific": true,
+        "examples": ["Troponin I: 0.8 ng/mL", "CK-MB: 25 U/L"]
+    },
+    "Medication": {
+        "description": "Prescribed or administered medications",
+        "properties": ["name", "dosage", "route", "frequency"],
+        "domain_specific": true,
+        "examples": ["Aspirin 325mg", "Metoprolol 5mg IV"]
+    },
+    "Diagnosis": {
+        "description": "Medical conditions or diagnoses identified",
+        "properties": ["condition", "type", "status"],
+        "domain_specific": true,
+        "examples": ["acute coronary syndrome", "anterior wall STEMI"]
+    },
+    "HealthcareProfessional": {
+        "description": "Information about healthcare providers",
+        "properties": ["name", "role", "license_number", "department"],
+        "domain_specific": true,
+        "examples": ["Dr. Michael Chen", "License #MC123456"]
+    }
+}

@@ -170,7 +170,7 @@ def create_workflow() -> StateGraph:
     def should_continue(state: WorkflowState):
         should_continue_flag = (
             not state.error and
-            state.depth < 3 and
+            state.depth < 1 and
             len(state.entity_types) > len(state.type_relationships)
         )
         return "continue" if should_continue_flag else "end"
