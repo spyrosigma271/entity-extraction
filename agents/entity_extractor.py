@@ -197,7 +197,7 @@ def create_workflow() -> StateGraph:
         # Continue if there are significant changes in entities or confidence scores
         should_continue_flag = (
             not state.error and
-            state.depth < 1  # Limit refinement iterations
+            state.depth < 2  # Limit refinement iterations
         )
         return "continue" if should_continue_flag else "end"
 

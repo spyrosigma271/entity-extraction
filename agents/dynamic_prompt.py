@@ -214,8 +214,9 @@ def create_workflow() -> StateGraph:
     workflow.add_node("generate", generate_prompt)
     workflow.add_node("refine", refine_prompt)
     
-    workflow.add_edge("generate", "refine")
-    workflow.add_edge("refine", END)
+    # workflow.add_edge("generate", "refine")
+    # workflow.add_edge("refine", END)
+    workflow.add_edge("generate", END)
     
     workflow.set_entry_point("generate")
     return workflow.compile()

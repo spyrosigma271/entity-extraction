@@ -170,8 +170,9 @@ def create_workflow() -> StateGraph:
     workflow.add_node("standardize", standardize_entities)
     workflow.add_node("validate", validate_standardized_entities)
     
-    workflow.add_edge("standardize", "validate")
-    workflow.add_edge("validate", END)
+    # workflow.add_edge("standardize", "validate")
+    # workflow.add_edge("validate", END)
+    workflow.add_edge("standardize", END)
     
     workflow.set_entry_point("standardize")
     return workflow.compile()
