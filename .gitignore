@@ -1,2 +1,6 @@
 venv
 try.py
+.env
+__pycache__
+.env_local
+dumps

@@ -1,0 +1,26 @@
+{
+    "PersonalInformation": {
+        "description": "Basic personal identification information",
+        "properties": ["full_name", "date_of_birth", "email"],
+        "domain_specific": false,
+        "examples": ["John Smith", "15/03/1985", "john.smith@email.com"]
+    },
+    "EmploymentDetails": {
+        "description": "Current employment information",
+        "properties": ["company", "position", "start_date"],
+        "domain_specific": false,
+        "examples": ["Acme Corporation", "Senior Developer", "01/01/2020"]
+    },
+    "ContactInformation": {
+        "description": "Contact details and address",
+        "properties": ["phone", "address"],
+        "domain_specific": false,
+        "examples": ["+1-555-0123", "123 Main St, City, Country"]
+    },
+    "EducationalBackground": {
+        "description": "Academic qualifications and education history",
+        "properties": ["degree", "university", "graduation_year"],
+        "domain_specific": false,
+        "examples": ["Bachelor of Science", "State University", "2018"]
+    }
+}

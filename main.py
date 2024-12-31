@@ -11,6 +11,9 @@ from agents.entity_expansion import run_type_discovery
 from agents.entity_extractor import extract_entities
 from agents.output_standarization import standardize_entity_data  # New import
 
+import warnings
+warnings.filterwarnings("ignore")
+
 # Load environment variables
 load_dotenv()
 openai_api_key = os.getenv("OPENAI_API_KEY")
